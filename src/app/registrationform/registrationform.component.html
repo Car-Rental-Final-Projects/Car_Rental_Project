@@ -13,13 +13,36 @@
     <div class="form">
      <mat-card class="login-page">
    
-     <mat-card-title></mat-card-title>
+     <mat-card-title>Sign up</mat-card-title>
      
      <mat-card-content>
        <form class="login-form data-form"
        (ngSubmit)="onSubmit(loginForm)"
        #loginForm="ngForm">
-        Email:
+       <mat-form-field>
+        <input matInput type="Lastname" 
+        name="Lastname" 
+        ngModel 
+        placeholder="Last name" 
+        required
+        #fname="ngModel"
+        />
+        <mat-error *ngIf="fname.errors?.required">
+          Your full name is required
+      </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="Firstname" 
+        name="Firstname" 
+        ngModel 
+        placeholder="First name" 
+        required
+        #fname="ngModel"
+        />
+        <mat-error *ngIf="fname.errors?.required">
+          Your full name is required
+      </mat-error>
+      </mat-form-field>
          <mat-form-field>
            <input matInput type="email" 
            name="email" 
@@ -38,8 +61,6 @@
              The email you enter is not valid
          </mat-error>
          </mat-form-field>
-
-        Password:
          <mat-form-field>
            <input matInput type="password" 
            name="password" 
@@ -57,12 +78,11 @@
        </mat-error>
    
          </mat-form-field>
-       
-         <!-- <mat-form-field>
-           <input matInput type="studentid"
+         <mat-form-field>
+           <input matInput type="cont"
            name="studentid"
            ngModel
-           placeholder="Student ID"
+           placeholder="Contact number"
            required
            #studid="ngModel"
            
@@ -73,19 +93,22 @@
          </mat-error>
          
          </mat-form-field>
-   
          <mat-form-field>
-           <input matInput type="fullname" 
-           name="fullname" 
-           ngModel 
-           placeholder="Full name" 
-           required
-           #fname="ngModel"
-           />
-           <mat-error *ngIf="fname.errors?.required">
-             Your full name is required
-         </mat-error>
-         </mat-form-field>
+            <input matInput type="address"
+            name="address"
+            ngModel
+            placeholder="Address"
+            required
+            #studid="ngModel"
+            
+            
+            />
+            <mat-error *ngIf="studid.errors?.required">
+              The student ID is required
+          </mat-error>
+          
+          </mat-form-field>
+    
    
          <mat-form-field>
            <input matInput type="gender" 
@@ -98,18 +121,15 @@
             <mat-error *ngIf="gender.errors?.required">
              Your gender is required
          </mat-error>
-         </mat-form-field> -->
+         </mat-form-field> 
          
    
    
-         <button (click)="getValue(email.value, password.value)" 
-         mat-raised-button color="accent">Log In</button>
+         <button (click)="getValue(email.value, password.value,studid.value,
+         fname.value,
+         gender.value)" 
+         mat-raised-button color="accent">Submit</button>
          <br>
-         <div class="account">
-            Don't have an account yet? <a class="nav-link active" aria-current="page" href="/signup">Sign up</a>
-            <br><br>
-            <a class="nav-link active" aria-current="page" href="">Click here for admin</a>
-         </div>
             </form>
           </mat-card-content>  
         </mat-card>

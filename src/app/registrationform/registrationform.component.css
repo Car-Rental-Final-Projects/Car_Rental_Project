@@ -1,0 +1,44 @@
+.account{
+    text-align: center;
+    margin-top: 10%;
+  }
+  .form{
+    margin-left:800px;
+    position: relative;
+    padding-top: 7%;
+    
+  }
+  
+  .bg {
+    background-image: url(../../assets/images/RentalCarLG.jpg);
+    height: 60.5em;
+    background-size: cover;
+    width: auto;
+    background-position: 50% 50%;
+  }
+    
+  .login-page {
+      max-width: 350px;
+      
+  }
+    
+  .login-form {
+    
+      display: flex;
+      flex-direction: column;
+      
+  }
+    
+  
+    /* div{
+    width: 100%;
+    margin-left: 50%;
+    height: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    } */
+  
+  span{
+        color: red;
+  
+  }

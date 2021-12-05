@@ -2,25 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  selector: 'app-registrationform',
+  templateUrl: './registrationform.component.html',
+  styleUrls: ['./registrationform.component.css']
 })
-export class SigninComponent implements OnInit {
+export class RegistrationformComponent implements OnInit {
 
   displayEmail: any; 
   displayPass: any;
-  // displayID: any;
-  // displayName: any;
-  // displayGender: any;
+  displayID: any;
+  displayName: any;
+  displayGender: any;
   
 
- // myimage: string  = "assets/images/RentalCarLG.jpg";
   
   
   
   
-  getValue(val: any[],val2: any[]){
+  
+  getValue(val: any[],val2: any[],val3: any[],val4: any[],val5: any[]){
 
 
    
@@ -28,9 +28,9 @@ export class SigninComponent implements OnInit {
     
       this.displayEmail=val
       this.displayPass=val2
-      // this.displayID=val3
-      // this.displayName=val4
-      // this.displayGender=val5
+      this.displayID=val3
+      this.displayName=val4
+      this.displayGender=val5
 
 
       
