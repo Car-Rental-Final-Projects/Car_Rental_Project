@@ -33,13 +33,12 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
-import { RegistrationformComponent } from './registrationform/registrationform.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    RegistrationformComponent,
   ],
   imports: [
     BrowserModule,
